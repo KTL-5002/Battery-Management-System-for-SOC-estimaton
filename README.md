@@ -2,115 +2,109 @@
 
 ## 📌 Overview
 
-This project implements a **low-cost Battery Management System (BMS)** using an ESP32 to estimate the **State of Charge (SoC)** of a Lithium-ion battery.
+This project presents a **Battery Management System (BMS)** designed to estimate the **State of Charge (SoC)** of a Lithium-ion battery using an ESP32.
 
-The system combines:
+The system uses a hybrid approach:
 
-* **Coulomb Counting** (charge tracking)
-* **Open Circuit Voltage (OCV)** (drift correction)
+* Coulomb Counting (for continuous tracking)
+* Open Circuit Voltage (OCV) (for correction)
 
-to achieve a balance between **accuracy and computational simplicity**.
+This balances **accuracy, simplicity, and low computational cost**.
 
 ---
 
 ## ⚙️ Features
 
-* 📊 Real-time monitoring of:
+* 📊 Real-time monitoring:
 
   * Voltage
   * Current
   * Temperature
-* 🔋 SoC estimation using hybrid method (CC + OCV)
-* ⚡ Dual relay protection:
-
-  * Load cutoff
-  * Charger cutoff
-* 📺 LCD display for live data
-* 🔔 Buzzer alerts for safety events
-* 📡 Serial/Wireless logging via ESP32
+* 🔋 SoC estimation (Coulomb Counting + OCV)
+* ⚡ Dual relay protection (load + charger cutoff)
+* 📺 LCD display output
+* 🔔 Buzzer alerts
+* 📡 Serial monitoring via ESP32
 
 ---
 
 ## 🧠 Core Concept
 
-Instead of using computationally heavy techniques like Kalman Filters, this system relies on:
+Instead of complex estimation algorithms, this system relies on:
 
 * **Coulomb Counting**
-  → Integrates current over time to estimate charge
+  → Tracks battery charge over time
 
 * **OCV Correction**
-  → Adjusts SoC when battery is idle
-
-👉 This hybrid approach reduces drift while keeping the system lightweight.
+  → Reduces drift when battery is idle
 
 ---
 
 ## 🛠️ Hardware Components
 
-* ESP32 Microcontroller
+* ESP32
 * INA219 Current Sensor
 * DS18B20 Temperature Sensor
-* 2-Channel Relay Module
-* 16x2 LCD Display
-* Li-ion Battery
+* Relay Module
+* 16x2 LCD
+* Lithium-ion Battery
 
 ---
 
 ## 🔌 System Workflow
 
-1. Sensors measure voltage, current, and temperature
-2. ESP32 processes sensor data
-3. SoC is calculated using Coulomb Counting
-4. OCV correction applied when current ≈ 0
-5. Safety thresholds are checked
+1. Sensors collect voltage, current, and temperature
+2. ESP32 processes the data
+3. SoC is estimated using Coulomb Counting
+4. OCV corrects SoC when current is near zero
+5. Safety conditions are checked
 6. Relays disconnect load/charger if unsafe
-7. Data displayed on LCD and logged
+7. Data is displayed and logged
 
 ---
 
 ## 🚨 Safety Features
 
-* 🔥 Over-temperature protection
-* ⚡ Over-voltage protection
-* 🔋 Under-voltage protection
-* 🔔 Audible alert system
+* Over-temperature protection
+* Over-voltage protection
+* Under-voltage protection
+* Audible alerts
 
 ---
 
 ## 📊 Results Summary
 
-* Voltage error: **< 40 mV**
-* Stable SoC estimation with minimal drift
-* Accurate current measurement after calibration
-* Reliable relay response under fault conditions
+* Voltage error < 40 mV
+* Stable current measurement
+* Reliable SoC estimation with correction
+* Fast relay response during faults
 
 ---
 
 ## 📚 Documentation
 
-Detailed explanations are available here:
-
-* 📖 [Introduction](docs/introduction.md)
-* ⚙️ [Methodology](docs/methodology.md)
-* 📊 [Results](docs/results.md)
-* 🔌 [Hardware Connections](hardware/connections.md)
+* 📖 [Introduction](docs/Introduction.md)
+* ⚙️ [Methodology](docs/Methodology.md)
+* 📊 [Results](docs/Results.md)
+* 🔌 [Hardware Connections](hardware/Connections.md)
 
 ---
 
 ## 📂 Project Structure
 
-```
+```plaintext
 battery-management-system/
 │── README.md
-│── docs/
-│   ├── introduction.md
-│   ├── methodology.md
-│   ├── results.md
 │── code/
-│   └── bms_esp32.ino
+│   └── bms_code.ino
+│── docs/
+│   ├── Introduction.md
+│   ├── Methodology.md
+│   ├── Results.md
 │── hardware/
-│   └── connections.md
+│   └── Connections.md
 │── images/
+│   └── bms_img.jpeg
 ```
 
 ---
@@ -121,14 +115,18 @@ battery-management-system/
 
 * Open Arduino IDE
 * Select ESP32 board
-* Upload `code/bms_esp32.ino`
+* Upload:
 
-### 2️⃣ Connect Hardware
+  ```
+  code/bms_code.ino
+  ```
+
+### 2️⃣ Setup Hardware
 
 Follow:
-👉 [Hardware Connections](hardware/connections.md)
+👉 [Hardware Connections](hardware/Connections.md)
 
-### 3️⃣ Power the System
+### 3️⃣ Power System
 
 * Connect battery
 * Power ESP32
@@ -140,10 +138,16 @@ Follow:
 
 ---
 
+## 📸 System Preview
+
+![BMS Setup](images/bms_img.jpeg)
+
+---
+
 ## ⚠️ Limitations
 
 * No multi-cell balancing
-* No battery health (SOH) estimation
+* No battery health estimation
 * Fixed threshold-based protection
 
 ---
@@ -151,18 +155,13 @@ Follow:
 ## 🚀 Future Improvements
 
 * Multi-cell battery support
-* Mobile app monitoring (Bluetooth/Wi-Fi)
+* Wireless monitoring (mobile app)
 * MOSFET-based switching
-* Advanced SoC estimation (Kalman Filter / ML)
-
----
-
-## 📸 System Preview
-
-*Add images in the `images/` folder and link here*
+* Advanced SoC algorithms
 
 ---
 
 ## 📜 License
 
-This project is open-source and available for educational and research purposes.
+For educational and research purposes.
+
