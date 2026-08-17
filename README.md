@@ -1,6 +1,6 @@
-# 🔋 Battery Management System (BMS) for SoC Estimation
+# Battery Management System (BMS) for SoC Estimation
 
-## 📌 Overview
+## Overview
 
 This project presents a **Battery Management System (BMS)** designed to estimate the **State of Charge (SoC)** of a Lithium-ion battery using an ESP32.
 
@@ -13,22 +13,22 @@ This balances **accuracy, simplicity, and low computational cost**.
 
 ---
 
-## ⚙️ Features
+## Features
 
-* 📊 Real-time monitoring:
+*  Real-time monitoring:
 
   * Voltage
   * Current
   * Temperature
-* 🔋 SoC estimation (Coulomb Counting + OCV)
-* ⚡ Dual relay protection (load + charger cutoff)
-* 📺 LCD display output
-* 🔔 Buzzer alerts
-* 📡 Serial monitoring via ESP32
+*  SoC estimation (Coulomb Counting + OCV)
+*  Dual relay protection (load + charger cutoff)
+*  LCD display output
+*  Buzzer alerts
+*  Serial monitoring via ESP32
 
 ---
 
-## 🧠 Core Concept
+## Main Idea
 
 Instead of complex estimation algorithms, this system relies on:
 
@@ -40,7 +40,7 @@ Instead of complex estimation algorithms, this system relies on:
 
 ---
 
-## 🛠️ Hardware Components
+## Hardware Components
 
 * ESP32
 * INA219 Current Sensor
@@ -51,7 +51,7 @@ Instead of complex estimation algorithms, this system relies on:
 
 ---
 
-## 🔌 System Workflow
+## System Workflow
 
 1. Sensors collect voltage, current, and temperature
 2. ESP32 processes the data
@@ -63,7 +63,7 @@ Instead of complex estimation algorithms, this system relies on:
 
 ---
 
-## 🚨 Safety Features
+## Safety Features
 
 * Over-temperature protection
 * Over-voltage protection
@@ -72,7 +72,7 @@ Instead of complex estimation algorithms, this system relies on:
 
 ---
 
-## 📊 Results Summary
+## Results Summary
 
 * Voltage error < 40 mV
 * Stable current measurement
@@ -81,16 +81,16 @@ Instead of complex estimation algorithms, this system relies on:
 
 ---
 
-## 📚 Documentation
+## Documentation
 
-* 📖 [Introduction](docs/Introduction.md)
-* ⚙️ [Methodology](docs/Methodology.md)
-* 📊 [Results](docs/Results.md)
-* 🔌 [Hardware Connections](hardware/Connections.md)
+* [Introduction](docs/Introduction.md)
+* [Methodology](docs/Methodology.md)
+* [Results](docs/Results.md)
+* [Hardware Connections](hardware/Connections.md)
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```plaintext
 battery-management-system/
@@ -109,9 +109,9 @@ battery-management-system/
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
-### 1️⃣ Upload Code
+### Upload Code
 
 * Open Arduino IDE
 * Select ESP32 board
@@ -121,30 +121,30 @@ battery-management-system/
   code/bms_code.ino
   ```
 
-### 2️⃣ Setup Hardware
+### Setup Hardware
 
 Follow:
-👉 [Hardware Connections](hardware/Connections.md)
+[Hardware Connections](hardware/Connections.md)
 
-### 3️⃣ Power System
+###  Power System
 
 * Connect battery
 * Power ESP32
 
-### 4️⃣ Monitor Output
+### Monitor Output
 
 * LCD Display
 * Serial Monitor (115200 baud)
 
 ---
 
-## 📸 System Preview
+## System Preview
 
 ![BMS Setup](images/bms_img.jpeg)
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 * No multi-cell balancing
 * No battery health estimation
@@ -152,7 +152,7 @@ Follow:
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 * Multi-cell battery support
 * Wireless monitoring (mobile app)
@@ -161,7 +161,7 @@ Follow:
 
 ---
 
-## 📜 License
+## License
 
 For educational and research purposes.
 
