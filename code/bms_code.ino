@@ -1,5 +1,5 @@
 // =============================================================
-// FINAL BMS CODE (INA219 + DS18B20 + LCD + SOC + 2 RELAYS + BUZZER)
+// BMS CODE (INA219 + DS18B20 + LCD + SOC + 2 RELAYS + BUZZER)
 // Load Relay  -> GPIO 26
 // Charge Relay -> GPIO 27
 // Buzzer -> GPIO 14 (active buzzer)
