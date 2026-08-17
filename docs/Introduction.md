@@ -1,9 +1,9 @@
 # Introduction
 
-## 🔋 What is this project?
+## What is this project?
 This project implements a Battery Management System (BMS) using ESP32 to estimate the State of Charge (SoC) of a Lithium-ion battery.
 
-## ❗ Problem Statement
+## Problem Statement
 Lithium-ion batteries require continuous monitoring to prevent:
 - Overcharging
 - Deep discharge
@@ -11,14 +11,14 @@ Lithium-ion batteries require continuous monitoring to prevent:
 
 Without proper management, battery life reduces and safety risks increase.
 
-## 💡 Proposed Solution
+## Proposed Solution
 This system uses:
 - Coulomb Counting
 - Open Circuit Voltage (OCV)
 
 to estimate SoC in a simple and cost-effective way.
 
-## 🎯 Objectives
+## Objectives
 - Estimate SoC accurately
 - Monitor voltage, current, temperature
 - Provide safety cutoffs using relays
