@@ -1,6 +1,6 @@
 # Results
 
-## 🔌 Voltage Measurement
+## Voltage Measurement
 | State | Expected | Measured |
 |------|---------|----------|
 | Full | 4.20V | 4.18–4.19V |
@@ -9,27 +9,27 @@
 
 Deviation: < 40mV
 
-## 🔄 Current Measurement
+## Current Measurement
 - Charging → Positive current
 - Discharging → Negative current
 - Idle → Near zero
 
-## 🔋 SOC Behavior
+## SOC Behavior
 - Increases during charging
 - Decreases during discharge
 - Stable during idle
 - Corrected using OCV
 
-## 🌡️ Temperature Monitoring
+## Temperature Monitoring
 - Accuracy: ±1°C
 - Fault detection successful
 
-## 🚨 Protection System
+## Protection System
 - Over-voltage → Charger OFF
 - Under-voltage → Load OFF
 - Over-temperature → Full shutdown
 
-## 📺 Display Output
+## Display Output
 Real-time updates with:
 - Voltage
 - Current
